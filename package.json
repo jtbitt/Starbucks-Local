@@ -1,0 +1,23 @@
+{
+  "name": "momentdemo",
+  "version": "1.0.0",
+  "description": "Connecting to social media APIs for localized company information",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtbitt/momentdemo.git"
+  },
+  "author": "Jay Bittner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtbitt/momentdemo/issues"
+  },
+  "homepage": "https://github.com/jtbitt/momentdemo#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
