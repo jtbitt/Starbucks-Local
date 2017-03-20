@@ -6,13 +6,14 @@ var jshint     = require('gulp-jshint');
 var concat     = require('gulp-concat');
 var uglify     = require('gulp-uglify');
 var ngAnnotate = require('gulp-ng-annotate');
+var nodemon    = require('gulp-nodemon');
 
 gulp.task('css', function() {
     return gulp.src('src/assets/less/main.less')
         .pipe(less())
         .pipe(minifyCSS())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('src/assets/css'));
+        .pipe(gulp.dest('src/assets/dist'));
 });
 
 gulp.task('js', function() {
@@ -27,7 +28,7 @@ gulp.task('scripts', function() {
     .pipe(jshint.reporter('default'))
     .pipe(concat('all.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('src/dist'));
+    .pipe(gulp.dest('src/assets/dist'));
 });
 
 gulp.task('angular', function() {
@@ -37,7 +38,7 @@ gulp.task('angular', function() {
         .pipe(ngAnnotate())
         .pipe(concat('app.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('src/dist'));
+        .pipe(gulp.dest('src/assets/dist'));
 });
 
 gulp.task('watch', function() {
