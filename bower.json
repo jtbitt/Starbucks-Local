@@ -1,0 +1,24 @@
+{
+  "name": "momentdemo",
+  "description": "Connecting to social media APIs for localized company information",
+  "main": "server.js",
+  "authors": [
+    "Jay Bittner"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jtbitt/momentdemo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.3",
+    "angular-ui-router": "^0.4.2",
+    "angular-animate": "^1.6.3"
+  }
+}

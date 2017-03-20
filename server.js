@@ -8,10 +8,10 @@ var port    = process.env.PORT || 8080;
 app.use(express.static(__dirname + '/src'));
 
 // route to send index.html
-app.get('/', function(req, res)){
+app.get('/', function(req, res){
     res.sendFile(path.join(__dirname + '/src/index.html'));
 });
 
 // start server
 app.listen(port);
-console.log('Expres server listening on ' + port);
+console.log('Express server listening on ' + port);
