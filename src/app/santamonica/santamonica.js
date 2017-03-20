@@ -4,7 +4,7 @@ function config($stateProvider){
             url: 'santamonica',
             templateUrl: 'santamonica/santamonica.html',
             controller: 'SantaMonicaCtrl as vm'
-        })
+        });
 }
 
 function SantaMonicaCtrl(){

@@ -4,7 +4,7 @@ function config($stateProvider){
             url: 'london',
             templateUrl: 'london/london.html',
             controller: 'LondonCtrl as vm'
-        })
+        });
 }
 
 function LondonCtrl(){

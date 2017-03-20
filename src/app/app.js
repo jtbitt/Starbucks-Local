@@ -1,10 +1,13 @@
-function config($stateProvider){
+function config($stateProvider, $locationProvider){
     $stateProvider
         .state('sbucks', {
             url: '/',
-            templateUrl: 'app.html',
+            templateUrl: 'app/app.html',
             controller: 'AppCtrl as app'
-        })
+        });
+
+    $locationProvider.html5Mode(true);
+
 }
 
 function AppCtrl(){
@@ -14,11 +17,13 @@ function AppCtrl(){
 }
 
 angular.module('sbucks', [
+    'ui.router',
     'sbucks.santamonica',
     'sbucks.newyork',
     'sbucks.london'
 ])
 
+    .config(config)
     .controller('AppCtrl', AppCtrl)
 
 ;   
