@@ -3,6 +3,7 @@ function config($stateProvider, $locationProvider){
         .state('sbucks', {
             url: '/',
             templateUrl: 'app/app.html',
+            redirectTo: 'sbucks.store_info',
             controller: 'AppCtrl as app'
         });
 
@@ -14,32 +15,13 @@ function AppCtrl($scope){
 
     var app = this;
 
-    app.data;
-    app.photos;
-    app.reviews;
-
-    function getGoogleData(){
-        var service = new google.maps.places.PlacesService(map);
-        var place = { placeId: 'ChIJr4vVw8-kwoAR0iEipIyAZWw' };
-
-        service.getDetails(place, function(place, status) {
-                if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    if(place) {
-                        app.data = place;
-                        app.photos = app.data.photos;
-                        app.reviews = app.data.reviews;
-                        $scope.$apply();
-                    }
-                }
-            }
-        );
-    }
-    getGoogleData();
+    // If this was a bigger app, I would set up Global variables and config here
 
 }
 
 angular.module('sbucks', [
-    'ui.router'
+    'ui.router',
+    'sbucks.store_info'
 ])
 
     .config(config)

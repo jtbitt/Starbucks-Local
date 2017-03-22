@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-xs-12 text-center">
+        <h1>Starbucks</h1>
+        <h3>{{ vm.data['formatted_address'] }}</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-4" ng-repeat="photo in vm.photos">
+        <img class="img-responsive" ng-src="{{ photo.getUrl({'maxWidth': 300, 'maxHeight': 300}) }}"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-4" ng-repeat="review in vm.reviews">
+        <span>{{ review.rating }}</span>
+        <p>{{ review.text }}</p>
+    </div>
+</div>
+
+<div id="map"></div>
