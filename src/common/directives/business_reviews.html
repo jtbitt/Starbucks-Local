@@ -1,0 +1,4 @@
+<div ng-repeat="review in vm.reviews | limitTo:3">
+    <span>Rating: {{ review.rating }}</span>
+    <p>"{{ review.text }}"</p>
+</div>

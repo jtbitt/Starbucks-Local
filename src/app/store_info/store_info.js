@@ -38,7 +38,8 @@ function StoreInfoCtrl($scope){
 }
 
 angular.module('sbucks.store_info', [
-    'ui.router'
+    'ui.router',
+    'sbucks.common.directives.business_reviews'
 ])
 
     .controller('StoreInfoCtrl', StoreInfoCtrl)

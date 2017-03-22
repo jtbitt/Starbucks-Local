@@ -10,8 +10,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-12 col-md-offset-1 col-md-10" ng-repeat="review in vm.reviews | limitTo:3">
-        <span>{{ review.rating }}</span>
-        <p>"{{ review.text }}"</p>
+    <div class="col-xs-12 col-md-offset-1 col-md-10">
+        <business-reviews reviews="vm.reviews"></business-reviews>
     </div>
 </div>
