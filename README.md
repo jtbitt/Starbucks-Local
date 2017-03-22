@@ -5,8 +5,11 @@ A simple Angular app which connects with the Google Maps Javascript API (Places 
 Instructions:
 
 1 - Make sure node is installed
+<br>
 2 - Do an npm install within the repo
+<br>
 3 - Do a bower install
+<br>
 4 - Make sure gulp is installed
 
 Type 'gulp' to start the server
