@@ -3,15 +3,20 @@ function config($stateProvider, $locationProvider){
         .state('sbucks', {
             url: '/',
             templateUrl: 'app/app.html',
-            redirectTo: 'sbucks.store_info',
+            redirectTo: 'info',
             controller: 'AppCtrl as app'
-        });
+        })
+        .state('sbucks.store_info', {
+            url: 'info',
+            templateUrl: 'app/store_info/store_info.html',
+            controller: 'StoreInfoCtrl as vm'
+        });   
 
     $locationProvider.html5Mode(true);
 
 }
 
-function AppCtrl($scope){
+function AppCtrl($state){
 
     var app = this;
 

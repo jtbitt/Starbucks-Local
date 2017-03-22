@@ -1,13 +1,14 @@
-function config($stateProvider){
-    $stateProvider
-        .state('sbucks.store_info', {
-            url: 'info',
-            templateUrl: 'store_info/store_info.html',
-            controller: 'StoreInfoCtrl as vm'
-        });
-}
+// function config($stateProvider){
+//     $stateProvider
+//         .state('sbucks.store_info', {
+//             url: 'info',
+//             templateUrl: 'app/store_info/store_info.html',
+//             controller: 'StoreInfoCtrl as vm'
+//         });
 
-function StoreInfoCtrl(){
+// }
+
+function StoreInfoCtrl($scope){
 
     var vm = this;
 
@@ -16,10 +17,8 @@ function StoreInfoCtrl(){
     vm.photos;
     vm.reviews;
 
-    console.log('hi');
-
     function getGoogleData(){
-        var service = new google.maps.places.PlacesService(map);
+        var service = new google.maps.places.PlacesService(document.createElement('div'));
         var place = { placeId: 'ChIJr4vVw8-kwoAR0iEipIyAZWw' };
 
         service.getDetails(place, function(place, status) {
@@ -39,6 +38,7 @@ function StoreInfoCtrl(){
 }
 
 angular.module('sbucks.store_info', [
+    'ui.router'
 ])
 
     .controller('StoreInfoCtrl', StoreInfoCtrl)
