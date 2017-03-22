@@ -23,7 +23,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('scripts', function() {
-    return gulp.src(['src/app/*.js', 'src/app/**/*.js'])
+    return gulp.src(['src/app/*.js', 'src/app/**/*.js', 'src/common/directives/**/*.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(concat('all.js'))
@@ -32,11 +32,11 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('angular', function() {
-    return gulp.src(['src/app/*.js', 'src/app/**/*.js'])
+    return gulp.src(['src/app/*.js', 'src/app/**/*.js', 'src/common/directives/**/*.js'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(ngAnnotate())
-        .pipe(concat('app.js'))
+        .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest('src/assets/dist'));
 });

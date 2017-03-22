@@ -15,7 +15,7 @@ function businessReviews(){
         },
         templateUrl: 'common/directives/business_reviews/business_reviews.html',
         controller: 'BusinessReviewsCtrl as vm'
-    }
+    };
 
 }
 
