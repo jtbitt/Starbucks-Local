@@ -14,6 +14,7 @@ function StoreInfoCtrl($scope){
 
     // Set variables for view
     vm.data;
+    vm.address;
     vm.photos;
     vm.reviews;
 
@@ -25,8 +26,9 @@ function StoreInfoCtrl($scope){
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
                     if(place) {
                         vm.data = place;
-                        vm.photos = vm.data.photos;
-                        vm.reviews = vm.data.reviews;
+                        vm.address = place.formatted_address;
+                        vm.photos = place.photos;
+                        vm.reviews = place.reviews;
                         $scope.$apply();
                     }
                 }

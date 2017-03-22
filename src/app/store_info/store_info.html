@@ -1,16 +1,18 @@
 <div class="row">
     <div class="col-xs-12 text-center">
         <h1>Starbucks</h1>
-        <h3>{{ vm.data['formatted_address'] }}</h3>
+        <h3>{{ vm.address }}</h3>
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-12 col-md-4" ng-repeat="photo in vm.photos | limitTo:3">
-        <img class="img-responsive" style="width:100%;" ng-src="{{ photo.getUrl({'maxWidth': 400, 'maxHeight': 175}) }}"/>
+    <div class="col-xs-12 col-md-offset-1 col-md-10" ng-repeat="photo in vm.photos | limitTo:1">
+        <img class="img-responsive store-img"
+             ng-src="{{ photo.getUrl({'maxWidth': 1000, 'maxHeight': 1000}) }}"/>
     </div>
 </div>
+<div class="row15"></div>
 <div class="row">
-    <div class="col-xs-12 col-md-offset-1 col-md-10">
+    <div class="col-xs-12 col-md-offset-3 col-md-6">
         <business-reviews reviews="vm.reviews"></business-reviews>
     </div>
 </div>
