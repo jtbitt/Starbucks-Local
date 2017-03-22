@@ -3,7 +3,6 @@ function BusinessReviewsCtrl($scope){
 
     $scope.$watch('reviews', function(){
         vm.reviews = $scope.reviews;
-        console.log(vm.reviews);
     });
 }
 
@@ -14,7 +13,7 @@ function businessReviews(){
         scope: {
             reviews: '='
         },
-        templateUrl: 'common/directives/business_reviews.html',
+        templateUrl: 'common/directives/business_reviews/business_reviews.html',
         controller: 'BusinessReviewsCtrl as vm'
     }
 

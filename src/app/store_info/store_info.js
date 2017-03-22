@@ -1,12 +1,12 @@
-// function config($stateProvider){
-//     $stateProvider
-//         .state('sbucks.store_info', {
-//             url: 'info',
-//             templateUrl: 'app/store_info/store_info.html',
-//             controller: 'StoreInfoCtrl as vm'
-//         });
+ function config($stateProvider){
+     $stateProvider
+         .state('sbucks.store_info', {
+             url: 'info',
+             templateUrl: 'app/store_info/store_info.html',
+             controller: 'StoreInfoCtrl as vm'
+         });
 
-// }
+ }
 
 function StoreInfoCtrl($scope){
 
@@ -42,6 +42,7 @@ angular.module('sbucks.store_info', [
     'sbucks.common.directives.business_reviews'
 ])
 
+    .config(config)
     .controller('StoreInfoCtrl', StoreInfoCtrl)
 
 ;
