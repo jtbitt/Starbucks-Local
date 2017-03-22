@@ -15,6 +15,8 @@ function AppCtrl($scope){
     var app = this;
 
     app.data;
+    app.photos;
+    app.reviews;
 
     function getGoogleData(){
         var service = new google.maps.places.PlacesService(map);
@@ -23,8 +25,9 @@ function AppCtrl($scope){
         service.getDetails(place, function(place, status) {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
                     if(place) {
-                        console.log(place);
                         app.data = place;
+                        app.photos = app.data.photos;
+                        app.reviews = app.data.reviews;
                         $scope.$apply();
                     }
                 }
