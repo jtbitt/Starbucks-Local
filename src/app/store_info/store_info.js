@@ -13,7 +13,7 @@ function StoreInfoCtrl($scope){
     var vm = this;
 
     // Set variables for view
-    vm.data = [];
+    vm.data = {};
     vm.address = '';
     vm.photos = [];
     vm.reviews = [];
