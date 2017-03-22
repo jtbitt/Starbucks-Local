@@ -8,8 +8,6 @@ Instructions:
 <br>
 2 - Do an npm install within the repo
 <br>
-3 - Do a bower install
-<br>
-4 - Make sure gulp is installed
+3 - Make sure gulp is installed
 
 Type 'gulp' to start the server
